@@ -10,6 +10,7 @@ class SubForm(forms.ModelForm):
                 attrs = {
                     'class': 'form-group',
                     'id': 'origin',
+                    'height': '3rem',
                     'placeholder': 'Your original URL here'
                 }
             ),
