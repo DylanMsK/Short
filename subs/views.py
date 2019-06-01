@@ -3,8 +3,6 @@ from .models import Sub
 from .forms import SubForm
 
 # Create your views here.
-base_url = 'http://127.0.0.1:8000/'
-
 def index(request):
     if request.method == 'POST':
         form = SubForm(request.POST)
