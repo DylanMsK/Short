@@ -5,12 +5,16 @@ class SubForm(forms.ModelForm):
     class Meta:
         model = Sub
         fields = ('origin', 'new')
+        labels = {
+            'new': 'New Alias'
+        }
         widgets = {
-            'origin': forms.TextInput(
+            'origin': forms.Textarea(
                 attrs = {
                     'class': 'form-group',
                     'id': 'origin',
-                    'height': '3rem',
+                    'cols': 80,
+                    'rows': 3,
                     'placeholder': 'Your original URL here'
                 }
             ),
@@ -19,7 +23,10 @@ class SubForm(forms.ModelForm):
                     'class': 'form-group',
                     'id': 'linked',
                     'maxlength': 30,
-                    'placeholder': 'Your new linked URL here'
+                    'placeholder': 'Your new linked URL here (less 30 letters)'
                 }
             ),
+        }
+        help_texts = {
+            'new': 'http://url.diet/[linked url]'
         }
