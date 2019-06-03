@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,46 +13,8 @@
   <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css?family=Lato|Press+Start+2P&display=swap" rel="stylesheet">
 
-  <style>
-    body {
-      background-color: #fff9e9;
-      font-family: 'Lato', sans-serif;
-      padding-top: 5rem;
-    }
-
-    .header {
-      font-family: 'Press Start 2P', cursive;
-      word-spacing: -1.2rem;
-      text-align: center;
-      margin: 5rem auto 5rem;
-    }
-
-    .url-form {
-      padding: 0 24%;
-    }
-
-    .url-form label {
-      font-size: 140%;
-    }
-
-    .url-form #origin {
-      height: 9rem;
-      font-size: 1.2rem;
-      margin-bottom: 4rem;
-    }
-
-    .url-form #linked {
-      height: 3rem;
-      font-size: 1.2rem;
-      margin-bottom: 0;
-    }
-
-    .url-form small {
-      font-size: 1rem;
-      margin-left: 0.5rem;
-      margin-bottom: 2rem;
-    }
-  </style>
+  <!-- Custom stlylesheet -->
+  <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
 
 <title>Document</title>
 </head>

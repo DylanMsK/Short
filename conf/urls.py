@@ -15,8 +15,14 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from django.contrib.staticfiles.views import serve
+from django.conf.urls import handler404, handler500
 
 urlpatterns = [
+    path(r'^static/(?P<path>.*)', serve, kwargs={'insecure': True}),
     path('admin/', admin.site.urls),
     path('', include('subs.urls'))
 ]
+
+handler404 = 'subs.views.page_not_found'
+handler500 = 'subs.views.page_not_found'

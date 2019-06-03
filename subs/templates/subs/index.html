@@ -6,13 +6,13 @@
   <div class="header">
     <h1>Make your URL managable.</h1>
   </div>
-
+  
   <div class="url-form">
     <form method='POST'>
       {% csrf_token %}
       {% bootstrap_form form %}
       {% buttons %}
-        <button type="submit" class="btn btn-warning btn-lg float-right">Shorten!</button>
+      <button type="submit" class="btn btn-warning btn-lg float-right">Shorten!</button>
       {% endbuttons %}
     </form>
   </div>
